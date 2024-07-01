@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{65182731-C842-48D4-AD80-9A7C7CCDEE66}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ITM.My.MyApplication</StartupObject>
+    <RootNamespace>ITM</RootNamespace>
+    <AssemblyName>ITM</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ITM.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ITM.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>ITM.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>ITM.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\POS-Angeles-BSIT31A3\POS-Angeles-BSIT31A3\POS-Angeles-BSIT31A3\bin\Debug\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\POS-Angeles-BSIT31A3\POS-Angeles-BSIT31A3\POS-Angeles-BSIT31A3\bin\Debug\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ITMAssessment.Designer.vb">
+      <DependentUpon>ITMAssessment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ITMAssessment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ITMDashboard.Designer.vb">
+      <DependentUpon>ITMDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ITMDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ITMEnrollment.Designer.vb">
+      <DependentUpon>ITMEnrollment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ITMEnrollment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ITMMainPanel.Designer.vb">
+      <DependentUpon>ITMMainPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ITMMainPanel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ITMmodule.vb" />
+    <Compile Include="ITMPrintAssesment.Designer.vb">
+      <DependentUpon>ITMPrintAssesment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ITMPrintAssesment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ITMPrintENROLL.Designer.vb">
+      <DependentUpon>ITMPrintENROLL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ITMPrintENROLL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ITMSubjects.Designer.vb">
+      <DependentUpon>ITMSubjects.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ITMSubjects.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ITMUserModify.Designer.vb">
+      <DependentUpon>ITMUserModify.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ITMUserModify.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Login.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ITMAssessment.resx">
+      <DependentUpon>ITMAssessment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ITMDashboard.resx">
+      <DependentUpon>ITMDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ITMEnrollment.resx">
+      <DependentUpon>ITMEnrollment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ITMMainPanel.resx">
+      <DependentUpon>ITMMainPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ITMPrintAssesment.resx">
+      <DependentUpon>ITMPrintAssesment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ITMPrintENROLL.resx">
+      <DependentUpon>ITMPrintENROLL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ITMSubjects.resx">
+      <DependentUpon>ITMSubjects.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ITMUserModify.resx">
+      <DependentUpon>ITMUserModify.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PRINTT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recordsss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logggouttt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DD1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PRINTT1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loginn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Subjects.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user enrollment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOA Logoo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
